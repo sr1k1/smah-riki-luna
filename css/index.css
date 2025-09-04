@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Merienda";
+    src: url("font/Merienda.ttf");
+}
+
+/* Broad Choices */
+section {
+    margin: 30px 15px;
+}
+body {
+    background-color: rgb(252, 218, 174);
+    color:rgb(121, 0, 46);
+    font-family: "Merienda", sans-serif;
+}
+
+/* Element Choices */
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: cursive, sans-serif;
+    color:rgb(121, 0, 168);
+}
+h2 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: monospace, sans-serif;
+    color:rgb(0, 151, 151);
+}
+ul {
+    list-style-type: none;
+}
+li {
+    padding: 4px;
+    margin: 2px 0px;
+}
+
+a {
+    color:rgb(196, 0, 186)
+}
+
+/* ID-wide Choices */
+#about {
+    text-align: left;
+}
+#experience {
+    text-align: right;
+}
+#connect {
+    text-align: left;
+}
+
+/* Class-wide Choices */
+.experience-items {
+    border-right: 4px solid rgb(107, 0, 18);
+}
+.connect-items {
+    border-left: 4px solid rgb(0, 116, 106)
+
+}
