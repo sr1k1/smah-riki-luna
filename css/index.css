@@ -3,7 +3,7 @@
     src: url("font/Merienda.ttf");
 }
 
-/* Broad Choices */
+/* ============================= Global Styles ============================= */
 section {
     margin: 30px 15px;
 }
@@ -13,7 +13,7 @@ body {
     font-family: "Merienda", sans-serif;
 }
 
-/* Element Choices */
+/* ============================= Typography ============================= */
 h1 {
     font-size: 50px;
     font-weight: bold;
@@ -47,36 +47,77 @@ a {
     color:rgb(196, 0, 186)
 }
 
-/* ID-wide Choices */
+/* ============================= ID Styles ============================= */
 #about {
     text-align: left;
 }
+#skills {
+    text-align: right;
+}
 #experience {
+    text-align: left;
+}
+#projects {
     text-align: right;
 }
 #connect {
     text-align: left;
 }
 
-/* Class-wide Choices */
+/* ============================= Class Styles =============================*/
+
+/* Nav Bar */
+.sect-all {
+    background-color: rgb(253, 177, 63);
+    border-radius: 10px;
+    padding: 1px 0px;
+    margin: 0px 50px;
+}
+.sect-sel {
+    display: flex;
+    justify-content: space-around;
+
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+/* Experience */
 .experience-items {
-    border-right: 4px solid rgb(107, 0, 18);
+    display: flex;
+    background-color: rgb(255, 159, 33);
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-size: 12px; 
 }
+.exp-name {
+    margin-right: auto;
+}
+.exp-date {
+    margin-left: auto;
+}
+.experience-description {
+    font-size: 12px;
+}
+.experience-description > li {
+    border-left: 4px solid rgb(173, 55, 0);
+    margin-bottom: 10px;
+}
+
+/* Connect */
 .connect-items {
-    border-left: 4px solid rgb(0, 116, 106);
+    display: flex;
+    justify-content: space-around;
 }
+.prof-link-photos {
+    padding: 15px 8px;
+    display: block;
+    width: auto;
+    height: 60px;
+}
+
+/* Others (for now) */
 .misc-photos {
     margin-left: auto;
     padding: 15px 25px;
     display: block;
-}
-.prof-link-photos {
-    margin-right: auto;
-    margin-bottom: 5px;
-    padding: 15px 8px;
-    display: block;
-
-    border-left: 6px solid rgb(0, 116, 106);
-    width: 120px;
-    height: auto;
 }
