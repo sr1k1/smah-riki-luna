@@ -1,13 +1,19 @@
+/* The following code is built with desktop at the forefront. */
+
 @font-face {
     font-family: "Merienda";
     src: url("font/Merienda.ttf");
 }
 
 /* ============================= Global Styles ============================= */
+html {
+    font-size: 10px;
+}
 section {
-    margin: 30px 15px;
+    margin: 3rem 1.5rem;
 }
 body {
+    font-size: 1.5rem;
     background-color: rgb(252, 218, 174);
     color:rgb(121, 0, 46);
     font-family: "Merienda", sans-serif;
@@ -15,24 +21,24 @@ body {
 
 /* ============================= Typography ============================= */
 h1 {
-    font-size: 50px;
+    font-size: 4.5rem;
     font-weight: bold;
     font-family: cursive, sans-serif;
     color:rgb(121, 0, 168);
 }
 h2 {
-    padding: 1px 15px;
-    border-radius: 10px;
+    padding: 0.1rem 1.5rem;
+    border-radius: 1.5rem;
     background-color: rgb(0, 151, 151);
     color:rgb(255, 255, 255);
-    font-size: 35px;
+    font-size: 3rem;
     font-weight: bold;
     font-family: monospace, sans-serif;
 }
 p {
-    margin: 5px 25px;
-    padding: 10px;
-    border-radius: 10px;
+    margin: 0.5rem 3rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
     background-color: rgb(255, 159, 33);
     color:rgb(121, 0, 46);
 }
@@ -40,8 +46,8 @@ ul {
     list-style-type: none;
 }
 li {
-    padding: 4px;
-    margin: 2px 0px;
+    padding: 0.4rem;
+    margin: 0.2rem 0;
 }
 a {
     color:rgb(196, 0, 186)
@@ -67,40 +73,77 @@ a {
 /* ============================= Class Styles =============================*/
 
 /* Nav Bar */
-.sect-all {
-    background-color: rgb(253, 177, 63);
-    border-radius: 10px;
-    padding: 1px 0px;
-    margin: 0px 50px;
-}
 .sect-sel {
     display: flex;
     justify-content: space-around;
-
     flex: 1;
     flex-wrap: wrap;
+
+    padding: 1.5rem;
+    margin: 0 4.5rem;
+    background-color: rgb(253, 177, 63);
+    border-radius: 1.5rem;
 }
 
 /* Experience */
+.exp-name1 {
+    grid-area: exp-name1;
+}
+.exp-name2 {
+    grid-area: exp-name2;
+}
+.exp-name3 {
+    grid-area: exp-name3;
+}
+
+.exp-date1 {
+    grid-area: exp-date1;
+}
+.exp-date2 {
+    grid-area: exp-date2;
+}
+.exp-date3 {
+    grid-area: exp-date3;
+}
+
+.experience-description1 {
+    grid-area: experience-description1;
+}
+.experience-description2 {
+    grid-area: experience-description2;
+}
+.experience-description3 {
+    grid-area: experience-description3;
+}
+
+/* Needs a little more work, will follow up with something more polished!! */
 .experience-items {
-    display: flex;
-    background-color: rgb(255, 159, 33);
-    padding: 5px 5px;
-    border-radius: 10px;
-    font-size: 12px; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        "exp-name1 exp-name1 exp-date1 exp-date1"
+        "experience-description1 experience-description1 experience-description1 experience-description1"
+        "exp-name2 exp-name2 exp-date2 exp-date2"
+        "experience-description2 experience-description2 experience-description2 experience-description2"
+        "exp-name3 exp-name3 exp-date3 exp-date3"
+        "experience-description3 experience-description3 experience-description3 experience-description3";
+    padding: 0.5rem 0.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem; 
 }
-.exp-name {
-    margin-right: auto;
+
+.experience-description1 > li {
+    border-left: 0.4rem solid rgb(173, 55, 0);
+    margin-bottom: 1.5rem;
 }
-.exp-date {
-    margin-left: auto;
+.experience-description2 > li {
+    border-left: 0.4rem solid rgb(173, 55, 0);
+    margin-bottom: 1.5rem;
 }
-.experience-description {
-    font-size: 12px;
-}
-.experience-description > li {
-    border-left: 4px solid rgb(173, 55, 0);
-    margin-bottom: 10px;
+.experience-description3 > li {
+    border-left: 0.4rem solid rgb(173, 55, 0);
+    margin-bottom: 1.5rem;
 }
 
 /* Connect */
@@ -109,15 +152,76 @@ a {
     justify-content: space-around;
 }
 .prof-link-photos {
-    padding: 15px 8px;
+    padding: 1.5rem 0.8rem;
     display: block;
     width: auto;
-    height: 60px;
+    height: 6rem;
 }
 
 /* Others (for now) */
 .misc-photos {
     margin-left: auto;
-    padding: 15px 25px;
+    padding: 1.5rem 3rem;
     display: block;
+    object-fit: cover;
+}
+
+/* Phone Display */
+@media (max-width: 500px) {
+h1 {
+    font-size: 5.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    background-color: rgb(255, 168, 98);
+
+}
+h2 {
+    font-size: 3.5rem;
+    padding: 0.4rem 2.0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2rem;    
+}
+p {
+    margin: 0.5rem 0.5rem;
+    font-size: 1.7rem;
+}
+
+.sect-sel {
+    font-size: 2rem;
+    padding: 2.5rem;
+    margin: 0 2.5rem;
+}
+
+
+}
+
+/* Tablet Display */
+@media (min-width: 500px) and (max-width: 1000px) {
+h1 {
+    font-size: 6.5rem;
+    text-align: center;
+
+}
+h2 {
+    font-size: 4rem;
+    padding: 1rem 3rem;
+}
+p {
+    margin: 0.5rem 1rem;
+    font-size: 2.3rem;
+}
+
+/* Haven't gotten to it this iteration (as of yet), but I will 
+make this more dynamic soon!! */
+.misc-photos {
+    margin: 0 auto;
+    object-fit: fill;
+}
+
+.sect-sel {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    margin: 0 2.5rem;
+}
+
 }
