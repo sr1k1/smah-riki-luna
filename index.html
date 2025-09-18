@@ -4,6 +4,7 @@
     <head>
         <title>Smah Riki's Portfolio</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name = "keywords" content = "HTML, JavaScript">
         <meta name = "description" content = "Portfolio">
         <link rel = "stylesheet" href = "css/index.css">
@@ -13,15 +14,12 @@
         <header>
             <h1>Smah Riki</h1>
 
-            <nav class = 'sect-all'>
-                <ul class = 'sect-sel'>
-                    <li class = 'sect-1'><a href = "#about">About</a></li>
-                    <li class = 'sect-2'><a href = "#skills">Skills</a></li>
-                    <li class = 'sect-3'><a href = "#experience">Experience</a></li>
-                    <li class = 'sect-4'><a href = "#projects">Projects</a></li>
-                    <li class = 'sect-5'><a href = "#connect">Connect</a></li>
-                </ul>
-
+            <nav class = 'sect-sel'>
+                <a class = 'sect-1' href = "#about">About</a>
+                <a class = 'sect-2' href = "#skills">Skills</a>
+                <a class = 'sect-3' href = "#experience">Experience</a>
+                <a class = 'sect-4' href = "#projects">Projects</a>
+                <a class = 'sect-5' href = "#connect">Connect</a>
             </nav>
         </header>
 
@@ -53,47 +51,43 @@
             <section id = "experience">
                 <h2>Experience</h2>
 
-                    <!-- Experience 1: Canvas Bulk Downloader-->
-                    <ul class = "experience-items">
-                        <li class = "exp-name">Canvas Bulk Downloader</li>
-                        <li class = "exp-date">January 2025 - Present</li>
-                    </ul>
-                    <ul class = 'experience-description'>
-                        <li>Created a Python script to interface with CanvasAPI and download 
-                            the user’s coursework in one session.</li>
-                        <li>Constructed GUI for the script using Tkinter to improve user interactions 
-                            with the software.</li>
-                    </ul>
 
-                    <!-- Experience 2: Furst Lab-->
-                    <ul class = "experience-items">
-                        <li class = "exp-name">Furst Lab Student Researcher</li>
-                        <li class = "exp-date">June 2023 - April 2025</li>
-                    </ul>
-                    <ul class = 'experience-description'>
-                        <li>Designed microfluidic device for preprocessing of diverse clinical samples in 
-                            low resource communities in conjunction with grad student.</li>
-                        <li>Created Python analogue of data analysis tool to process experimental data and 
-                            compute statistically significant figures.</li>
-                    </ul>
+                    <div class = "experience-items">
+                        <!-- Experience 1: Canvas Bulk Downloader-->
+                        <p class = "exp-name1">Canvas Bulk Downloader</p>
+                        <p class = "exp-date1">January 2025 - Present</p>
+                        <ul class = 'experience-description1'>
+                            <li>Created a Python script to interface with CanvasAPI and download 
+                                the user’s coursework in one session.</li>
+                            <li>Constructed GUI for the script using Tkinter to improve user interactions 
+                                with the software.</li>
+                        </ul>
 
-                    <!-- Experience 3: Mallow Madness-->
-                    <ul class = "experience-items">
-                        <li class = "exp-name">Mallow Madness</li>
-                        <li class = "exp-date">November - December 2023</li>
-                    </ul>
-                    <ul class = 'experience-description'>
-                        <li>Built a platformer game using the Godot game engine, with GDScript as the 
-                            primary coding language.</li>
-                        <li>Conducted five focus tests to assess the quality of our video game constraints.</li>
-                        <li>Worked in a team of four programmers/ graphic designers to design the game 
-                            for our final class project.</li>
-                    </ul>
+                        <!-- Experience 2: Furst Lab-->
+                        <p class = "exp-name2">Furst Lab Student Researcher</p>
+                        <p class = "exp-date2">June 2023 - April 2025</p>
+                        <ul class = 'experience-description2'>
+                            <li>Designed microfluidic device for preprocessing of diverse clinical samples in 
+                                low resource communities in conjunction with grad student.</li>
+                            <li>Created Python analogue of data analysis tool to process experimental data and 
+                                compute statistically significant figures.</li>
+                        </ul>
+
+                         <!-- Experience 3: Mallow Madness-->
+                        <p class = "exp-name3">Mallow Madness</p>
+                        <p class = "exp-date3">November - December 2023</p>
+                        <ul class = 'experience-description3'>
+                            <li>Built a platformer game using the Godot game engine, with GDScript as the 
+                                primary coding language.</li>
+                            <li>Conducted five focus tests to assess the quality of our video game constraints.</li>
+                            <li>Worked in a team of four programmers/ graphic designers to design the game 
+                                for our final class project.</li>
+                        </ul>
+                    </div>
             </section>
             <section id = "projects">
                 <h2>Projects</h2>
                 <ul>
-                    <li>Project 1</li>
                 </ul>
             </section>
             <section id = "connect">
