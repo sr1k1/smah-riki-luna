@@ -36,10 +36,7 @@ h2 {
     font-family: monospace, sans-serif;
 }
 p {
-    margin: 0.5rem 3rem;
-    padding: 1.5rem;
     border-radius: 1.5rem;
-    background-color: rgb(255, 159, 33);
     color:rgb(121, 0, 46);
 }
 ul {
@@ -53,10 +50,28 @@ a {
     color:rgb(196, 0, 186)
 }
 
+/* ============================= Media ============================= */
+img {
+    margin-left: auto;
+    padding: 1.5rem 3rem;
+    display: block;
+    object-fit: contain;
+
+    min-width: 1%;
+}
+
+
 /* ============================= ID Styles ============================= */
 #about {
     text-align: left;
 }
+
+#about > p {
+    margin: 0.5rem 3rem;
+    padding: 1.5rem;
+    background-color: rgb(255, 159, 33);
+}
+
 #skills {
     text-align: right;
 }
@@ -86,64 +101,34 @@ a {
 }
 
 /* Experience */
-.exp-name1 {
-    grid-area: exp-name1;
+.exp-name {
+    grid-area: exp-name;
 }
-.exp-name2 {
-    grid-area: exp-name2;
+.exp-date {
+    grid-area: exp-date;
+    text-align: right;
 }
-.exp-name3 {
-    grid-area: exp-name3;
+.exp-desc {
+    grid-area: exp-desc;
+    margin: 0 0.5rem
 }
-
-.exp-date1 {
-    grid-area: exp-date1;
-}
-.exp-date2 {
-    grid-area: exp-date2;
-}
-.exp-date3 {
-    grid-area: exp-date3;
+.exp-desc > li {
+    border-left: 0.4rem solid rgb(173, 55, 0);
+    margin-bottom: 1.5rem;
 }
 
-.experience-description1 {
-    grid-area: experience-description1;
-}
-.experience-description2 {
-    grid-area: experience-description2;
-}
-.experience-description3 {
-    grid-area: experience-description3;
-}
-
-/* Needs a little more work, will follow up with something more polished!! */
 .experience-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 1fr auto;
     grid-template-areas: 
-        "exp-name1 exp-name1 exp-date1 exp-date1"
-        "experience-description1 experience-description1 experience-description1 experience-description1"
-        "exp-name2 exp-name2 exp-date2 exp-date2"
-        "experience-description2 experience-description2 experience-description2 experience-description2"
-        "exp-name3 exp-name3 exp-date3 exp-date3"
-        "experience-description3 experience-description3 experience-description3 experience-description3";
-    padding: 0.5rem 0.5rem;
+        "exp-name exp-name . exp-date"
+        "exp-desc exp-desc exp-desc exp-desc";
+
+    margin: 0 0.5rem;
+    padding: 1.5rem;
     border-radius: 1.5rem;
     font-size: 1.5rem; 
-}
-
-.experience-description1 > li {
-    border-left: 0.4rem solid rgb(173, 55, 0);
-    margin-bottom: 1.5rem;
-}
-.experience-description2 > li {
-    border-left: 0.4rem solid rgb(173, 55, 0);
-    margin-bottom: 1.5rem;
-}
-.experience-description3 > li {
-    border-left: 0.4rem solid rgb(173, 55, 0);
-    margin-bottom: 1.5rem;
 }
 
 /* Connect */
@@ -157,17 +142,28 @@ a {
     width: auto;
     height: 6rem;
 }
-
-/* Others (for now) */
-.misc-photos {
-    margin-left: auto;
-    padding: 1.5rem 3rem;
-    display: block;
-    object-fit: cover;
+.phone {
+    display: none;
 }
+
+/* Individual Photos */
+.krc-food-pic {
+    max-width: 40%;
+}
+
+/* Adding background color to text */
+.emph-txt {
+    display: inline-block; /* ensures that highlights don't overlap text */
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: rgb(255, 159, 33);
+}
+
+/* ============================= Device Compatibility =============================*/
 
 /* Phone Display */
 @media (max-width: 500px) {
+/* == Typography == */
 h1 {
     font-size: 5.5rem;
     border-radius: 1.5rem;
@@ -186,17 +182,34 @@ p {
     font-size: 1.7rem;
 }
 
+/* == Class Styles == */
+.krc-food-pic {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+
+    transform: rotate(90deg);
+    max-width: 90%;
+}
 .sect-sel {
     font-size: 2rem;
     padding: 2.5rem;
     margin: 0 2.5rem;
 }
-
-
+.exp-date {
+    text-align: center;
+}
+.phone {
+    display: block;
+}
+.desktop {
+    display: none;
+}
 }
 
 /* Tablet Display */
 @media (min-width: 500px) and (max-width: 1000px) {
+/* == Typography == */
 h1 {
     font-size: 6.5rem;
     text-align: center;
@@ -211,17 +224,19 @@ p {
     font-size: 2.3rem;
 }
 
-/* Haven't gotten to it this iteration (as of yet), but I will 
-make this more dynamic soon!! */
-.misc-photos {
-    margin: 0 auto;
-    object-fit: fill;
-}
+/* == Class Styles == */
+.krc-food-pic {
+    margin-left: auto;
+    margin-right: auto;
 
+    max-width: 70%;
+}
 .sect-sel {
     font-size: 2.5rem;
     padding: 1.5rem;
     margin: 0 2.5rem;
 }
-
+.exp-date {
+    text-align: center;
+}
 }
