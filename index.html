@@ -20,6 +20,7 @@
                 <a class = 'sect-3' href = "#experience">Experience</a>
                 <a class = 'sect-4' href = "#projects">Projects</a>
                 <a class = 'sect-5' href = "#connect">Connect</a>
+                <a class = 'sect-6' href = "#send-message">Message</a>
             </nav>
         </header>
 
@@ -108,6 +109,34 @@
 
                     </div>
             </section> <!-- /connect -->
+            <section id = 'send-message'>
+                <h2>Leave a Message</h2>
+
+                <form name = 'leave_message'>
+                    <div class = 'one-form-field'>
+                        <label for = 'uName'>Name: </label>
+                        <input id = 'uName' type = 'text' name = 'usersName' required = 'true'>
+                    </div>
+                    <div class = 'one-form-field'>
+                        <label for = 'uEmail'><Br>Email: </label>
+                        <input id = 'uEmail' type = 'email' name = 'usersEmail' required = 'true'>
+                    </div>
+                    <div class = 'one-form-field'>
+                        <label for = 'uMessage'><Br>Message: </label>
+                        <textarea id = 'uMessage' name = 'usersMessage' required = 'true'></textarea>
+                    </div>
+                    <label for = 'subBtn'><Br></label>
+                    <button id = 'subBtn' name = 'subBtn' type = 'submit'>Submit</button>
+                </form>
+
+            </section> <!-- /send-message -->
+            <section id = 'messages'>
+                <h2>Messages</h2>
+
+                <ul>
+
+                </ul>
+            </section> <!-- /messages -->
         </main>
         <script src = 'js/index.js'></script>
     </body>

@@ -91,6 +91,11 @@ img {
     text-align: right;
 }
 
+/* Leave a Message */
+#send-message > h2 {
+    text-align: right;
+}
+
 /* ============================= Class Styles =============================*/
 
 /* Nav Bar */
@@ -166,6 +171,27 @@ img {
     display: none;
 }
 
+/* Messages */
+.one-form-field {
+    margin: 0 2rem;
+    padding: 0.5rem;
+}
+.one-form-field > label {
+    font-size: 2rem;
+}
+.one-form-field > input {
+    font-size: 3rem;
+    width: 33dvw;
+}
+.one-form-field > textarea {
+    width: 55dvw;
+}
+
+#send-message button {
+    font-size: 3rem;
+}
+
+
 /* Individual Photos */
 .krc-food-pic {
     max-width: 40dvw;
@@ -219,6 +245,21 @@ p {
 .exp-date {
     text-align: center;
 }
+
+.one-form-field > input {
+    font-size: 4rem;
+    width: 70dvw;
+}
+.one-form-field > textarea {
+    min-width: 60dvw;
+    min-height: 50dvh;
+}
+
+#send-message button {
+    font-size: 6rem;
+    margin: 0 10rem;
+}
+
 .phone {
     display: block;
 }
@@ -239,6 +280,12 @@ p {
     text-align: center;
 }
 #connect > h2 {
+    text-align: center;
+}
+#send-message > h2 {
+    text-align: center;
+}
+#messages > h2 {
     text-align: center;
 }
 }
@@ -273,5 +320,17 @@ p {
 }
 .exp-date {
     text-align: center;
+}
+
+.one-form-field > input {
+    font-size: 4rem;
+    width: 40dvw;
+}
+.one-form-field > textarea {
+    min-height: 30dvh;
+}
+
+#send-message button {
+    font-size: 4rem;
 }
 }
