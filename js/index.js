@@ -47,7 +47,10 @@ const messageForm = body.querySelector("[name='leave_message']");
 
 // Add event listener to add functionality to the submit 
 // button and remove button.  
-messageForm.addEventListener('click', event => {
+messageForm.addEventListener('submit', event => {
+
+    // Prevent default refreshing behavior upon form submission
+    event.preventDefault();
 
     // Helpful definitions
     const usersName = event.currentTarget.usersName.value;
@@ -55,16 +58,7 @@ messageForm.addEventListener('click', event => {
     const usersMessage = event.currentTarget.usersMessage.value;
     const submitBtn = event.currentTarget.subBtn;
 
-    // If submit button is not clicked, do nothing
-    if (!(event.target === submitBtn)) {
-        return
-    }
-
     // -------- Message Submission Behavior ---------- //
-
-    // Prevent default refreshing behavior upon form submission
-    event.preventDefault();
-
     // Console log results and reset form
     console.log(`Name: ${usersName}`);
     console.log(`Email: ${usersEmail}`);
