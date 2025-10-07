@@ -41,3 +41,56 @@ const copyright = document.createElement('p');
 copyright.innerText = `\u00A9${thisYear} Smah Riki`;
 
 footer.appendChild(copyright);
+
+// ======= Message Form ======= //
+const messageForm = body.querySelector("[name='leave_message']");
+
+// Add event listener to add functionality to the submit 
+// button and remove button.  
+messageForm.addEventListener('submit', event => {
+
+    // Prevent default refreshing behavior upon form submission
+    event.preventDefault();
+
+    // Helpful definitions
+    const usersName = event.currentTarget.usersName.value;
+    const usersEmail = event.currentTarget.usersEmail.value;
+    const usersMessage = event.currentTarget.usersMessage.value;
+    const submitBtn = event.currentTarget.subBtn;
+
+    // -------- Message Submission Behavior ---------- //
+    // Console log results and reset form
+    console.log(`Name: ${usersName}`);
+    console.log(`Email: ${usersEmail}`);
+    console.log(`Message: ${usersMessage}`);
+
+    // -------- Message Board Behavior ---------- //
+    // Locate the messages display section and enclosed ul element
+    const messageSection = document.querySelector('#messages');
+    const messageList = messageSection.querySelector('ul');
+
+    // Create functionality for individual messages
+    const newMessage = document.createElement('li');
+    newMessage.innerHTML = `<a href = 'mailto:${usersEmail}'>${usersName}: <span>${usersMessage}</span></a>`;
+
+    // Create a remove button for message
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'remove';
+    removeButton.setAttribute('type', 'button');
+
+    // Add behavior to remove button
+    removeButton.addEventListener('click', event => {
+        // Find parent of button (i.e. message) and remove it
+        const entry = event.target.parentNode
+        entry.remove();
+    }
+    );
+
+    // Append button to the message, then message to list
+    newMessage.appendChild(removeButton);
+    messageList.append(newMessage);
+
+    // Reset the whole form
+    event.currentTarget.reset();
+
+})
