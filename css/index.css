@@ -156,6 +156,15 @@ img {
     font-size: 1.5rem; 
 }
 
+/* Project */
+.project-item {
+    text-align: right;
+    border-right: 0.4rem solid rgb(173, 55, 0);
+    margin-right: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
 /* Connect */
 .connect-items {
     display: flex;
@@ -246,6 +255,13 @@ p {
     text-align: center;
 }
 
+.project-item {
+    text-align: center;
+    border: 0.4rem solid rgb(173, 55, 0);
+    margin: 1.5 rem 2.5rem;
+    font-size: 2rem
+}
+
 .one-form-field > input {
     font-size: 4rem;
     width: 70dvw;
@@ -320,6 +336,10 @@ p {
 }
 .exp-date {
     text-align: center;
+}
+
+.project-item {
+    font-size: 2.5rem;
 }
 
 .one-form-field > input {

@@ -92,5 +92,28 @@ messageForm.addEventListener('submit', event => {
 
     // Reset the whole form
     event.currentTarget.reset();
-
 })
+
+// ======= Fetch Request ======= //
+fetch('https://api.github.com/users/sr1k1/repos')
+    .then(response => response.json())
+    .then(data => {
+        let repositories = data;
+        console.log(repositories);
+
+        // Select the ul element in the projects section
+        const projectList = projects.querySelector('ul');
+
+        // Iterate over length of repos
+        for (i = 0; i < repositories.length; i++) {
+            const project = document.createElement('li');
+            
+            // Set inner text to names of repo + give them classes
+            project.innerText = repositories[i].name;
+            project.classList.add('project-item');
+
+            // Append element to list
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => console.log('An error occurred!'));
