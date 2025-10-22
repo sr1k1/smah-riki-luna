@@ -109,7 +109,7 @@ fetch('https://api.github.com/users/sr1k1/repos')
             const project = document.createElement('li');
             
             // Set inner text to names of repo + give them classes
-            project.innerText = repositories[i].name;
+            project.innerHTML = `<a href = ${repositories[i].html_url}>${repositories[i].name}</a>`;
             project.classList.add('project-item');
 
             // Append element to list
