@@ -71,12 +71,16 @@ messageForm.addEventListener('submit', event => {
 
     // Create functionality for individual messages
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href = 'mailto:${usersEmail}'>${usersName}: <span>${usersMessage}</span></a>`;
+    newMessage.innerHTML = `<p><a href = 'mailto:${usersEmail}'>${usersName}:</a> <span>${usersMessage}</span></p>`;
+
+    // Give class to message to later turn it into a flex display
+    newMessage.setAttribute('class', 'one-message');
 
     // Create a remove button for message
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.setAttribute('type', 'button');
+    removeButton.setAttribute('class', 'remove-btn');    
 
     // Add behavior to remove button
     removeButton.addEventListener('click', event => {
@@ -109,7 +113,7 @@ fetch('https://api.github.com/users/sr1k1/repos')
             const project = document.createElement('li');
             
             // Set inner text to names of repo + give them classes
-            project.innerText = repositories[i].name;
+            project.innerHTML = `<a href = ${repositories[i].html_url}>${repositories[i].name}</a>`;
             project.classList.add('project-item');
 
             // Append element to list
