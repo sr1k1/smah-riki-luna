@@ -200,7 +200,17 @@ img {
     font-size: 3rem;
 }
 
-
+.message-board {
+    display: flex;
+    flex-direction: column;
+}
+.one-message {
+    display: flex;
+}
+.remove-btn {
+    padding: 0;
+    margin-left: 1.5rem;
+}
 /* Individual Photos */
 .krc-food-pic {
     max-width: 40dvw;

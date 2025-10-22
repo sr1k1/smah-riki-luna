@@ -71,12 +71,16 @@ messageForm.addEventListener('submit', event => {
 
     // Create functionality for individual messages
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href = 'mailto:${usersEmail}'>${usersName}: <span>${usersMessage}</span></a>`;
+    newMessage.innerHTML = `<p><a href = 'mailto:${usersEmail}'>${usersName}:</a> <span>${usersMessage}</span></p>`;
+
+    // Give class to message to later turn it into a flex display
+    newMessage.setAttribute('class', 'one-message');
 
     // Create a remove button for message
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.setAttribute('type', 'button');
+    removeButton.setAttribute('class', 'remove-btn');    
 
     // Add behavior to remove button
     removeButton.addEventListener('click', event => {
